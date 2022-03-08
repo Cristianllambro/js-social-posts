@@ -102,9 +102,7 @@ container.append(contPost);
 
 // function date
 function datePost (){
-    let date = new Date();
-    date.getDate;
-    console.log(date)
+
 }
 
 
