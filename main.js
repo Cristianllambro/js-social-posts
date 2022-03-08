@@ -105,15 +105,11 @@ container.append(contPost);
 
 
 //function likes
-const likeButton = document.querySelector('.like-button');
-let likesCounter = document.querySelector('.js-likes-counter');
+let likeButton = document.querySelector('.like-button');
+let likesCounter = document.querySelectorAll('.js-likes-counter');
 
 likeButton.addEventListener('click', function(){
-    do {
-        likeButton.classList.toggle('like-button--liked');
-    } while (i < posts.length){
-        posts.[i].likes++;
-    }
+    likeButton.classList.toggle('like-button--liked');
     
 });
 
