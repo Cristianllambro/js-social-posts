@@ -8,7 +8,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
-        "created": "2021-06-25"
+        "created": "2021-09-03"
     },
     {
         "id": 2,
@@ -58,7 +58,6 @@ const posts = [
 
 const container = document.getElementById('container');
 
-
 for(let i = 0; i < posts.length; i++) {  
     cardPost(posts[i].author.image, posts[i].author.name, posts[i].content, posts[i].media, posts[i].likes, posts[i].created);
 }
@@ -86,7 +85,7 @@ function cardPost (authorImg, authorName, content, media, likes, created) {
 <div class="post__footer">
     <div class="likes js-likes">
         <div class="likes__cta">
-            <a class="like-button  js-like-button" href="#" data-postid="1">
+            <a class="like-button  js-like-button" href="#!">
                 <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                 <span class="like-button__label">Mi Piace</span>
             </a>
@@ -98,5 +97,22 @@ function cardPost (authorImg, authorName, content, media, likes, created) {
 </div>`
 container.append(contPost);
 }
+
+
+
+// function date
+
+
+
+//function likes
+const likeButton = document.querySelector('.like-button');
+
+likeButton.addEventListener('click', function(){
+    likeButton.classList.toggle('like-button--liked');
+    posts.likes + '1';
+});
+
+//function name image
+
 
 
