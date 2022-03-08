@@ -8,7 +8,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
-        "created": "2021-09-03"
+        "created": datePost()
     },
     {
         "id": 2,
@@ -101,7 +101,11 @@ container.append(contPost);
 
 
 // function date
-
+function datePost (){
+    let date = new Date();
+    date.getDate;
+    console.log(date)
+}
 
 
 //function likes
@@ -115,5 +119,7 @@ likeButton.addEventListener('click', function(){
 
 //function name image
 
+
+// NON SONO CAPACE MI DISPIACE, MI SENTO UN PESCE FUOR D'ACQUA CON JS
 
 
