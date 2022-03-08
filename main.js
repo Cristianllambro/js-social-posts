@@ -106,10 +106,13 @@ container.append(contPost);
 
 //function likes
 const likeButton = document.querySelector('.like-button');
+let likesCounter = document.querySelector('.js-likes-counter');
 
 likeButton.addEventListener('click', function(){
-    likeButton.classList.toggle('like-button--liked');
-    posts.likes + '1';
+    do {
+        likeButton.classList.toggle('like-button--liked');
+    } while ()
+    
 });
 
 //function name image
