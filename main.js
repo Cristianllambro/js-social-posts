@@ -111,7 +111,9 @@ let likesCounter = document.querySelector('.js-likes-counter');
 likeButton.addEventListener('click', function(){
     do {
         likeButton.classList.toggle('like-button--liked');
-    } while ()
+    } while (i < posts.length){
+        posts.[i].likes++;
+    }
     
 });
 
