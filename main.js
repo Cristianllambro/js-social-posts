@@ -8,7 +8,7 @@ const posts = [
             "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
-        "created": datePost()
+        "created": "2021-09-03"
     },
     {
         "id": 2,
@@ -66,6 +66,7 @@ for(let i = 0; i < posts.length; i++) {
 function cardPost (authorImg, authorName, content, media, likes, created) {
     let contPost = document.createElement('div');
     contPost.classList.add('post');
+
     contPost.innerHTML = `
     <div class="post__header">
     <div class="post-meta">                    
@@ -74,7 +75,7 @@ function cardPost (authorImg, authorName, content, media, likes, created) {
         </div>
         <div class="post-meta__data">
             <div class="post-meta__author">${authorName}</div>
-            <div class="post-meta__time">${created}</div>
+            <div class="post-meta__time">${created.split('-').reverse().join('/')}</div>
         </div>                    
     </div>
 </div>
@@ -91,33 +92,22 @@ function cardPost (authorImg, authorName, content, media, likes, created) {
             </a>
         </div>
         <div class="likes__counter">
-            Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
+            Piace a <b class="js-likes-counter">${likes}</b> persone
         </div>
     </div> 
 </div>`
 container.append(contPost);
-}
 
-
-
-// function date
-function datePost (){
-
-}
-
-
-//function likes
-let likeButton = document.querySelector('.like-button');
-let likesCounter = document.querySelectorAll('.js-likes-counter');
-
+let likeButton = contPost.querySelector('.like-button');
 likeButton.addEventListener('click', function(){
     likeButton.classList.toggle('like-button--liked');
     
 });
+}
+
+//function likes
+let likesCounter = document.querySelectorAll('.js-likes-counter');
 
 //function name image
 
-
-// NON SONO CAPACE MI DISPIACE, MI SENTO UN PESCE FUOR D'ACQUA CON JS
-
-
+// NON RIESCO A RAGIONARE... HENRI HA FATTO RAGIONAMENTI TROPPO AVANZATI PER IL MIO CERVELLO, QUINDI LASCIO COSI'!
